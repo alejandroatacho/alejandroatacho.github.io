@@ -12,8 +12,8 @@ fetch('../../Lottery-Js-UI')
     for (var i = 0; i < fileNames.length; i++) {
       var fileName = fileNames[i].trim();
 
-      // Skip over empty file names
-      if (!fileName) {
+      // Skip over empty file names and directories
+      if (!fileName || fileName.endsWith('/')) {
         continue;
       }
 
