@@ -2,7 +2,7 @@
 var ul = document.getElementById('lottery-files');
 
 // Get the contents of the Lottery-Js-UI submodule
-fetch('../../Lottery-Js-UI')
+fetch('Lottery-Js-UI/')
   .then(response => response.text())
   .then(data => {
     // Split the data into file names
@@ -18,7 +18,7 @@ fetch('../../Lottery-Js-UI')
       }
 
       // Fetch the file contents and add them to the ul element
-      fetch('../Lottery-Js-UI/' + fileName)
+      fetch('Lottery-Js-UI/' + fileName)
         .then(response => response.text())
         .then(fileContent => {
           var li = document.createElement('li');
