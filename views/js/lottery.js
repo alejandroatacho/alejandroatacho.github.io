@@ -1,22 +1,17 @@
-// Fetch the contents of the Lottery-Js-UI submodule
-fetch('/Lottery-Js-UI/')
+// Get the ul element where the files will be displayed
+var ul = document.getElementById('lottery-files');
+
+// Get the contents of the Lottery-Js-UI submodule
+fetch('Lottery-Js-UI')
   .then(response => response.text())
   .then(data => {
-    // Parse the HTML content of the submodule
-    const parser = new DOMParser();
-    const html = parser.parseFromString(data, 'text/html');
+    // Split the data into lines
+    var lines = data.split('\n');
 
-    // Get the files in the Lottery-Js-UI submodule
-    const files = html.querySelectorAll('a');
-
-    // Add each file as a list item to the lottery-files ul element
-    const lotteryFiles = document.getElementById('lottery-files');
-    files.forEach(file => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = `/Lottery-Js-UI/${file.innerText}`;
-      a.innerText = file.innerText;
-      li.appendChild(a);
-      lotteryFiles.appendChild(li);
-    });
+    // Loop through the lines and add them to the ul element
+    for (var i = 0; i < lines.length; i++) {
+      var li = document.createElement('li');
+      li.textContent = lines[i];
+      ul.appendChild(li);
+    }
   });
