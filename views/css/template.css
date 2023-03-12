@@ -289,4 +289,41 @@ h3 {
   .insta-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.submodules {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+}
+.submodules h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.submodules .submodules-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submodules .submodules-buttons .btn {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  width: 350px;
+  height: auto;
+  max-height: 100%;
+  background-image: url("path/to/image");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.submodules .submodules-buttons .btn:hover {
+  background-color: #ee3900;
 }/*# sourceMappingURL=template.css.map */

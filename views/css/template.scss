@@ -267,3 +267,47 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+$submodules-bg-color: #f4f4f4;
+$accent-color: #ff5722;
+
+.submodules {
+  background-color: $submodules-bg-color;
+  padding: 50px 0;
+
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .submodules-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+      background-color: $accent-color;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.2s ease;
+      width: 350px;
+      height: auto;
+      max-height: 100%;
+      background-image: url("path/to/image");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+}
