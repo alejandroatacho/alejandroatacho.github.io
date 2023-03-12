@@ -1,0 +1,117 @@
+$primary-color: #3d3d3d;
+$secondary-color: #dcdcdc;
+$accent-color: #ff5722;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  background-image: url("../../../media/bg_module.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; /* Set the height to 100 viewport height to make the background image cover the whole screen */
+  margin-top: 0;
+  .container-title {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      color: #40a8bf;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+
+  .module-list {
+    h4 {
+      color: $primary-color;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      margin: 20px 0;
+      padding: 10px;
+      background-color: transparent; /* Make the background transparent */
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      border: none; /* Remove the border */
+
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+
+        button {
+          background-color: $accent-color;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 1rem;
+          transition: background-color 0.2s ease;
+          width: 350px;
+          height: 100px;
+
+          &:hover {
+            background-color: darken($accent-color, 10%);
+            transform: scale(1.05);
+            cursor: pointer;
+          }
+        }
+        .special-btn-1 {
+          background-image: url("../../../../Lottery-Js-UI/src/images/applesauce.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .special-btn-2 {
+          background-image: url("../../../media/52519914_p0_master1200.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+.return-button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  background-color: #40a8bf;
+  padding: 10px 15px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.return-button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
