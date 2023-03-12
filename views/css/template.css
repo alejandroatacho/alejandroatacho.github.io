@@ -5,6 +5,8 @@
   --light-color: #fff;
   --bg: #222;
   --var-color_blue: blue;
+  --submodules-bg-color: #f4f4f4;
+  --accent-color: #ff5722;
 }
 
 * {
@@ -151,7 +153,7 @@ h3 {
   position: relative;
 }
 
-.social-links ul li {
+ul li {
   list-style: none;
   position: relative;
   width: 80px;
@@ -162,7 +164,7 @@ h3 {
   transition: 0.5s;
 }
 
-.social-links li a {
+li a {
   width: 40px;
   height: 40px;
   background-color: var(--light-color);
@@ -172,7 +174,7 @@ h3 {
   transition: var(--transition);
 }
 
-.social-links li a:hover {
+li a:hover {
   opacity: 0.9;
 }
 
@@ -198,7 +200,7 @@ h3 {
   transition: 1.8s;
 }
 
-/* button down and title -reusable */
+/* button down and title - reusable */
 .btn-down {
   font-size: 3rem;
   display: inline-block;
@@ -218,15 +220,13 @@ h3 {
 .title {
   margin-bottom: 5rem;
 }
-
 .title h2 {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
   position: relative;
 }
-
-.title h2::after {
+css Copy code .title h2::after {
   position: absolute;
   content: "";
   top: 120%;
@@ -290,40 +290,140 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.submodules {
-  background-color: #f4f4f4;
-  padding: 50px 0;
+img {
+  max-width: 100%;
 }
-.submodules h2 {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 50px;
+
+.insta-grid-item {
+  position: relative;
+  overflow: hidden;
 }
-.submodules .submodules-buttons {
+css Copy code .insta-grid-item:hover .insta-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+.insta-grid-item .insta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
 }
-.submodules .submodules-buttons .btn {
-  background-color: #ff5722;
+.insta-grid-item .insta-overlay h3 {
   color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.insta-grid-item .insta-overlay .btn {
+  background-color: #fff;
+  color: #ff5722;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
   transition: background-color 0.2s ease;
-  width: 350px;
-  height: auto;
-  max-height: 100%;
-  background-image: url("path/to/image");
-  background-size: cover;
-  background-position: center;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
+  margin-top: 1rem;
 }
-.submodules .submodules-buttons .btn:hover {
-  background-color: #ee3900;
+.insta-grid-item .insta-overlay .btn:hover {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+/* form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 4rem 2rem;
+}
+.contact-form .form-control {
+  width: 100%;
+  border: none;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+css Copy code .contact-form .form-control:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #ff5b4a;
+}
+.contact-form .form-control-textarea {
+  height: 200px;
+}
+.contact-form .submit-btn {
+  background-color: #ff5b4a;
+  color: var(--light-color);
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: var(--transition);
+  cursor: pointer;
+  margin-top: 1rem;
+}
+css Copy code .contact-form .submit-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-5px);
+}
+
+/* footer */
+.footer {
+  background-color: var(--dark-color);
+  padding: 5rem 0;
+  color: var(--light-color);
+}
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer .footer-logo {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+.footer .footer-content p {
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+.footer .footer-content ul li {
+  margin: 0 10px;
+}
+.footer .footer-content ul li a {
+  font-size: 2rem;
+}
+.footer .footer-bottom {
+  background-color: var(--bg);
+  padding: 2rem 0;
+  text-align: center;
+}
+.footer .footer-bottom p {
+  color: var(--light-color);
+  font-size: 1.5rem;
+  opacity: 0.6;
+  margin-top: 1rem;
 }/*# sourceMappingURL=template.css.map */
