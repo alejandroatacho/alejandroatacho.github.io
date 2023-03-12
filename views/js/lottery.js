@@ -18,7 +18,7 @@ fetch('../../Lottery-Js-UI')
       }
 
       // Fetch the file contents and add them to the ul element
-      fetch('../../Lottery-Js-UI/' + fileName)
+      fetch('../Lottery-Js-UI/' + fileName)
         .then(response => response.text())
         .then(fileContent => {
           var li = document.createElement('li');
