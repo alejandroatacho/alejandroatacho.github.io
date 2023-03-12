@@ -1,0 +1,3 @@
+[submodule "Lottery-Js-UI"]
+	path = Lottery-Js-UI
+	url = https://github.com/alejandroatacho/Lottery-Js-UI.git
