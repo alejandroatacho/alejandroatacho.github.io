@@ -526,3 +526,18 @@ img {
 .highlighted-day {
   background-color: greenyellow;
 }
+#login-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9999; /* set a high value */
+  color: transparent;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+#login-button:focus {
+  color: black;
+  background-color: white;
+}
