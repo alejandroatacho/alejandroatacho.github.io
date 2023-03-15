@@ -498,6 +498,6 @@ css Copy code .contact-form .submit-btn:hover {
 }
 
 #login-button:focus {
-  color: black;
-  background-color: white;
+  color: #a22929;
+  background-color: transparent;
 }/*# sourceMappingURL=template.css.map */
