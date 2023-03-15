@@ -387,6 +387,22 @@ css Copy code .contact-form .submit-btn:hover {
   transform: translateY(-5px);
 }
 
+/*Logged in page*/
+.menu_logged_in {
+  background-color: greenyellow;
+}
+.menu_logged_in div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu_logged_in div p {
+  color: aliceblue;
+  text-shadow: 1px 1px 1px #332e29;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 /* footer */
 .footer {
   background-color: var(--dark-color);
@@ -426,4 +442,46 @@ css Copy code .contact-form .submit-btn:hover {
   font-size: 1.5rem;
   opacity: 0.6;
   margin-top: 1rem;
+}
+
+/* Calendar */
+.calendar {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px #888888;
+}
+.calendar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.calendar .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.calendar .calendar-header css Copy code i {
+  cursor: pointer;
+  font-size: 20px;
+}
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.calendar table tr:first-child {
+  text-align: center;
+  font-weight: bold;
+}
+.calendar table tr td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.highlighted-day {
+  background-color: greenyellow;
 }/*# sourceMappingURL=template.css.map */
